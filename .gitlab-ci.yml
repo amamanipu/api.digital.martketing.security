@@ -1,0 +1,31 @@
+include:
+  - project: 'tottus/devops-tools/templates/ci-cd'
+    file: '/all-in-one-tottus/all-cicd-nodejs-npm-ds-onprem.yml'
+
+cache:
+  paths:
+    - node_modules/
+
+# Variables de entorno locales
+variables:
+  BUILD_IMAGE: gcr.io/tot-ti-corp-arqdevops-dev/cicd/secaas/base/node-dev:12-latest
+  # NPM_DEP_MANUAL: 'npm i && npm run build'
+  NPM_DEP_RUN_MANUAL: 'npm install'
+  NPM_RUN_ARGS_UNIT: 'test'
+  NPM_RUN_ARGS_COV: 'coverage'
+  NPM_RUN_ARGS_MUT: 'mutode'
+  SONAR_EXCLUSIONS: 'node_modules/**, tests/**, k8s/**, docker/**'
+  PROJECT_LANG: 'node'
+  APP_PORT_QA: 3000
+  APP_PORT_PRD: 3001
+  APP_ENV_QA: 'qa'
+  APP_ENV_PRD: 'prd'
+  CI_APP_REPLICAS_QA: 1
+  CI_APP_MAX_REPLICAS_QA: 2
+  CI_APP_REPLICAS_PRD: 2
+  CI_APP_MAX_REPLICAS_PRD: 4
+  CI_REPORT_PATH: 'coverage/lcov.info'
+  MODE_QA: 'online'
+  MODE_PRD: 'online'
+  #Path consumo microservicio
+  API_BASE_NAME: 'acl-order-ds'

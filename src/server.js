@@ -24,7 +24,7 @@ const app = async (config) => {
   /**
   * Servidor Happi
   */
-  const server = Hapi.server({ host, port });
+  const server = Hapi.server({ host, port, routes: { cors: true } });
   server.realm.modifiers.route.prefix = prefix;
 
   // Adiciona a la propiedad app la propiedad config asignandole el objeto config

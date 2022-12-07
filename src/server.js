@@ -29,8 +29,8 @@ const app = async (config) => {
     port,
     routes: {
       cors: {
-        origin: ['localhost:8080'],
-        headers: ['Accept', 'Content-Type'],
+        origin: ['http://209.45.54.91:8080'],
+        headers: ['Accept', 'Content-Type', 'authorization', 'x-organizationid'],
         additionalHeaders: ['X-Requested-With'],
       },
     },

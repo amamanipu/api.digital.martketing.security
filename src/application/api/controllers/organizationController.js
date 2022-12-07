@@ -59,6 +59,7 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/organization/{organizationId}',
     config: {
+      cors: true,
       handler: organization.get,
       description: 'Se obtiene la información de la organizacion',
       notes: 'Se obtiene la información de la organizacion',
@@ -92,6 +93,7 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/organization',
     config: {
+      cors: true,
       handler: organization.create,
       description: 'Registrar Organización',
       notes: 'Registrar Organización',
@@ -125,6 +127,7 @@ module.exports.register = async (server) => {
     method: 'PUT',
     path: '/api/organization/{organizationId}',
     config: {
+      cors: true,
       handler: organization.update,
       description: 'Actualizar Organización',
       notes: 'Actualizar Organización',

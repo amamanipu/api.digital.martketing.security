@@ -27,6 +27,7 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/roles',
     config: {
+      cors: true,
       handler: role.getAll,
       description: 'Se obtiene la información de los roles',
       notes: 'Se obtiene la información de los roles',

@@ -159,6 +159,7 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/user/recovery',
     config: {
+      cors: true,
       handler: user.recovery,
       description: 'Recuperar Contraseña',
       notes: 'Recuperar Contraseña',

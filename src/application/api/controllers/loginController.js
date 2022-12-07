@@ -22,6 +22,7 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/login',
     config: {
+      cors: true,
       handler: login.validate,
       description: 'Validacion de Acceso',
       notes: 'Validacion de Acceso',

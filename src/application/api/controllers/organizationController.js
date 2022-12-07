@@ -26,6 +26,7 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/organizations',
     config: {
+      cors: true,
       handler: organization.getAll,
       description: 'Se obtiene la información de las organizaciones',
       notes: 'Se obtiene la información de las organizaciones',

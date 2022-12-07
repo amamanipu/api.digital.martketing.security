@@ -20,6 +20,7 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/status/healthy',
     config: {
+      cors: true,
       handler: async () => 'Api is healthy.',
     },
   });
@@ -27,6 +28,7 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/status/alive',
     config: {
+      cors: true,
       handler: async () => 'Api is alive.',
     },
   });

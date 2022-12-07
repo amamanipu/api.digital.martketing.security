@@ -27,7 +27,6 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/users',
     config: {
-      cors: true,
       handler: user.getAll,
       description: 'Se obtiene la información de los usuarios',
       notes: 'Se obtiene la información de los usuarios',
@@ -60,7 +59,6 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/user/{userId}',
     config: {
-      cors: true,
       handler: user.get,
       description: 'Se obtiene la información del usuario',
       notes: 'Se obtiene la información del usuario',
@@ -94,7 +92,6 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/user',
     config: {
-      cors: true,
       handler: user.create,
       description: 'Registrar Usuario',
       notes: 'Registrar Usuario',
@@ -128,7 +125,6 @@ module.exports.register = async (server) => {
     method: 'PUT',
     path: '/api/user/{userId}',
     config: {
-      cors: true,
       handler: user.update,
       description: 'Actualizar Usuario',
       notes: 'Actualizar Usuario',
@@ -163,7 +159,6 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/user/recovery',
     config: {
-      cors: true,
       handler: user.recovery,
       description: 'Recuperar Contraseña',
       notes: 'Recuperar Contraseña',

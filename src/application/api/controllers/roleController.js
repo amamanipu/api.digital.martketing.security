@@ -27,7 +27,6 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/roles',
     config: {
-      cors: true,
       handler: role.getAll,
       description: 'Se obtiene la información de los roles',
       notes: 'Se obtiene la información de los roles',
@@ -60,7 +59,6 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/role/{roleId}',
     config: {
-      cors: true,
       handler: role.get,
       description: 'Se obtiene la información del rol',
       notes: 'Se obtiene la información del rol',
@@ -94,7 +92,6 @@ module.exports.register = async (server) => {
     method: 'GET',
     path: '/api/role/{roleId}/{userId}',
     config: {
-      cors: true,
       handler: role.getOptionsUser,
       description: 'Se obtiene la información del rol',
       notes: 'Se obtiene la información del rol',
@@ -128,7 +125,6 @@ module.exports.register = async (server) => {
     method: 'POST',
     path: '/api/role',
     config: {
-      cors: true,
       handler: role.create,
       description: 'Registrar Rol',
       notes: 'Registrar Rol',
@@ -162,7 +158,6 @@ module.exports.register = async (server) => {
     method: 'PUT',
     path: '/api/role/{roleId}',
     config: {
-      cors: true,
       handler: role.update,
       description: 'Actualizar Rol',
       notes: 'Actualizar Rol',

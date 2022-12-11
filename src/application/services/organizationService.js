@@ -46,6 +46,7 @@ const create = async (req, res) => {
     const responseOrganization = await organizationService.create(server, {
       Name: organization.Name.toUpperCase(),
       UserInsert: organization.UserInsert,
+      IdSector: organization.IdSector,
     });
 
     const responseRole = await roleService.create(server, {

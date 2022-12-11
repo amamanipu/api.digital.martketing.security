@@ -9,11 +9,13 @@ module.exports = class {
       DateInsert,
       UserUpdate,
       DateUpdate,
+      Sector,
     },
   ) {
     this.OrganizationId = OrganizationId;
     this.Name = Name;
     this.Major = Major;
+    this.Sector = Sector;
     this.State = State;
     this.UserInsert = UserInsert;
     this.DateInsert = DateInsert;

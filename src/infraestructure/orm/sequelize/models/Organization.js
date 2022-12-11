@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => sequelize.define('Organization', {
     allowNull: false,
     defaultValue: 0,
   },
+  IdSector: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   State: {
     type: DataTypes.BOOLEAN,
     allowNull: false,

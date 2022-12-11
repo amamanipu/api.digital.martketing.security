@@ -10,9 +10,28 @@ const register = async ({ getConnection }) => {
     const { models } = await getConnection();
     const model = models.Organization;
 
+    models.Sector.hasOne(model, {
+      sourceKey: 'IdSector',
+      foreignKey: 'IdSector',
+    });
+
+    model.belongsTo(models.Sector, {
+      sourceKey: 'IdSector',
+      foreignKey: 'IdSector',
+    });
+
     const seqOrganizations = await model.findAll(
       {
         where: params,
+        include: [
+          {
+            model: models.Sector,
+            required: true,
+            attributes: [
+              'Description',
+            ],
+          },
+        ],
       },
     );
 
